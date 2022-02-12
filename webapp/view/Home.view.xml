@@ -1,0 +1,91 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+controllerName="basic1.zbasicfiori1.controller.Home" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+				<content>
+		<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="{i18n>Addr}"/>
+					<ToolbarSpacer />
+					<Button type="Emphasized" icon="sap-icon://edit" text="Edit"/>
+					<Button type= "Accept" icon="sap-icon://save" text="Save" />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Toolbar ariaLabelledBy="Title2">
+					<Title id="Title2" text="Office"/>
+					<ToolbarSpacer />
+				</Toolbar>
+				<Label text="Name" />
+				<Input value="{SupplierName}" />
+				<Label text="Street/No." />
+				<Input value="{Street}">
+				</Input>
+				<Input value="{HouseNumber}">
+					<layoutData>
+						<l:GridData span="XL2 L1 M3 S4" />
+					</layoutData>
+				</Input>
+				<Label text="ZIP Code/City" />
+				<Input value="{ZIPCode}">
+					<layoutData>
+						<l:GridData span="XL2 L1 M3 S4" />
+					</layoutData>
+				</Input>
+				<Input value="{City}" />
+                <Label text = "Test" />
+                <Input value = "{Test}" />
+                <Label text = "Gender" />
+                <ComboBox
+				items="" >
+                <core:Item key="F" text="Female" />
+                <core:Item key="O" text="Others" />
+			</ComboBox>
+                <Label text="Comment" /> 
+                <TextArea ></TextArea>   
+				<Label text="Country" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+				<Toolbar ariaLabelledBy="Title3">
+					<Title id="Title3" text="Online"/>
+					<ToolbarSpacer />
+				</Toolbar>
+				<Label text="Web" />
+				<Input value="{Url}" type="Url" />
+				<Label text="Twitter" />
+				<Input value="{Twitter}" />
+			</f:content>
+		</f:SimpleForm>
+				</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
